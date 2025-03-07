@@ -7,12 +7,6 @@ added to a Rails project to enforce password policies. The gem is implemented as
 [devise](https://github.com/plataformatec/devise) authentication solution gem and requires that __devise__ is installed
 as well.
 
-## Build Status
-
-| Service    | rails 6.1 |
-|:-----------|:-----------:|
-| Circle CI  | [![Circle CI](https://circleci.com/gh/ValiMail/devise-secure_password/tree/master.svg?style=shield&circle-token=cd173d5f9d2944a9b14737c2d4339b20b08565cf)]() |
-
 ## Overview
 
 The __Devise Secure Password Extension__ is composed of the following modules:
@@ -32,8 +26,8 @@ The goal of this project is to provide compatibility for officially supported st
 and [Ruby on Rails](http://guides.rubyonrails.org/maintenance_policy.html). More specifically, the following releases
 are currently supported by the __Devise Secure Password Extension__:
 
-- Ruby on Rails: __6.1.x__, __6.0.x__ (current and previous stable release)
-- Ruby: __3.0.x__, __2.7.x__ (current and previous stable release)
+- Ruby on Rails: __6.1.x__, __7.0.x__
+- Ruby: __3.1.x__, __3.2.x__, __3.3.x__
 
 ### Updating to a New Rails Version
 
@@ -261,14 +255,14 @@ To determine the Ruby on Rails versions supported by this release, run the follo
 prompt> gem install flay ruby2ruby rubocop rspec
 prompt> rake test:spec:targets
 
-Available Rails targets: 5.1, 5.2
+Available Rails targets: 7.0, 6.1
 ```
 
 Reconfigure the project by specifying the correct Gemfile when running bundler, followed by running tests:
 
 ```bash
-prompt> BUNDLE_GEMFILE=gemfiles/rails_5_2.gemfile bundle
-prompt> BUNDLE_GEMFILE=gemfiles/rails_5_2.gemfile bundle exec rake
+prompt> BUNDLE_GEMFILE=gemfiles/rails_7_0.gemfile bundle
+prompt> BUNDLE_GEMFILE=gemfiles/rails_7_0.gemfile bundle exec rake
 ```
 
 The only time you need to define the `BUNDLE_GEMFILE` environment variable is when testing a non-default target.
